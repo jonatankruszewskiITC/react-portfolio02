@@ -38,10 +38,10 @@ class Contact extends React.Component {
     };
 
     // YOUR EMAIL.JS API KEY IN FORMAT user_xxxxxxxxxxxxxxxxxx
-    let API_KEY = "user_1S8epxAvmChcYf5W9MZjo";
+    let API_KEY = process.env.REACT_APP_EMAILJS_KEY;
 
     // YOUR EMAIL.JS TEMPLATE ID
-    let TEMPLATE_ID = "template_r87dbf8";
+    let TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 
     emailjs.send("default_service", TEMPLATE_ID, template_params, API_KEY).then(
       function (response) {
